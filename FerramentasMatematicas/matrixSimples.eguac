@@ -1,0 +1,40 @@
+// eguac IDE [egua.tech] 
+//Feito por: Heictor Costa
+main 
+    inteiro i;
+    inteiro j=0;
+    inteiro eixoi;
+    //Insira a quantidade de elementos em i
+    leia ("%d", &eixoi);
+    inteiro eixoj;
+    //Insira a quantidade de elementos em j
+    leia ("%d", &eixoj);
+    inteiro vetor[eixoi][eixoj];
+    inteiro listai[eixoi];
+    
+    //Título da matriz
+    escreva("\nMatriz %dx%d\n", eixoi, eixoj);
+    
+    //PARA usado no preenchimento do eixo i
+    escreva("    ");
+    para(i=0;i<eixoi;i++)
+        listai[i] = i;
+        escreva("  [%d] ", listai[i]);
+    fim
+    
+    //Definindo valores para os elementos da matrix
+    vetor[0][0]=3;
+    vetor[0][1]=5;
+    vetor[1][0]=7;
+    vetor[1][1]=9;
+    
+    //Exibição da matriz por meio do laço de repetição
+    para(j=0;j<eixoj;j++)
+        escreva("\n[%d]", j);
+        para(i=0;i<eixoi;i++)
+            escreva("   %d  ", vetor[i][j]);
+        fim
+    fim
+
+    retorna 0; 
+fim 
