@@ -1,0 +1,26 @@
+// eguac IDE [egua.tech] 
+//Feito por: Heictor Costa
+main 
+    inteiro fatorial; 
+    //Insira o número a ter seu fatorial calculado
+    leia ("%d", &fatorial);
+    //i é i índice de contagem para o laço
+    inteiro i;
+    //Variável auxiliar para armazenar resultado total
+    //Deve ser igual a 1 para ser neutro na multiplicação
+    inteiro resultado=1;
+    se (fatorial<0)
+        escreva("Erro: O número inserido é negativo.");
+    contrario
+        se (fatorial==0)
+            escreva("0!=1");
+        contrario
+            para(i=1;i<fatorial+1;i++)
+                escreva("\n%d!= ", i);
+                resultado = i*resultado;
+                escreva("%d\n", resultado);
+            fim
+        fim
+    fim
+    retorna 0; 
+fim 
