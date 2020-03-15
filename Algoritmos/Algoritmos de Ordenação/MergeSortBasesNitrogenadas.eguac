@@ -1,0 +1,67 @@
+// eguac IDE [egua.tech] 
+ 
+main 
+    inteiro vetor1[] = {5, 4, 7, 6, 1, 0, 3, 2};
+    inteiro qtd = 8;
+    inteiro a;
+    inteiro aux;
+    inteiro i;
+    funcao (inteiro escrever())
+        escreva ("\nVetor1:       [%d][%d][%d][%d][%d][%d][%d][%d]\n", vetor1[0], vetor1[1], vetor1[2], vetor1[3], vetor1[4], vetor1[5], vetor1[6], vetor1[7]);
+        escreva ("\nVetor1:      [%d][%d][%d][%d]  [%d][%d][%d][%d]\n", vetor1[0], vetor1[1], vetor1[2], vetor1[3], vetor1[4], vetor1[5], vetor1[6], vetor1[7]);
+        escreva ("\nVetor1:     [%d][%d]  [%d][%d]  [%d][%d]  [%d][%d]\n", vetor1[0], vetor1[1], vetor1[2], vetor1[3], vetor1[4], vetor1[5], vetor1[6], vetor1[7]);
+        escreva ("\nVetor1:[%d]  [%d]  [%d]  [%d]  [%d]  [%d]  [%d]  [%d]\n", vetor1[0], vetor1[1], vetor1[2], vetor1[3], vetor1[4], vetor1[5], vetor1[6], vetor1[7]);
+    fim
+    escrever();
+    
+
+    para (i=0; i<7; i=i+2)
+        se (vetor1[i]>vetor1[i+1])
+            escreva("\nAjuste:%d\n", i/2+1);
+            aux = vetor1[i];
+            vetor1[i] = vetor1[i+1];
+            vetor1[i+1] = aux;
+            escreva ("Vetor1: Posição[%d]:", i);
+            escreva("%d\n", vetor1[i]);
+            escreva ("Vetor1: Posição[%d]:", i+1);
+            escreva("%d\n", vetor1[i+1]);
+        fim
+    fim
+    escreva ("\n");
+    inteiro vetor2[] = {vetor1[0], vetor1[1], vetor1[2], vetor1[3]};
+    inteiro vetor3[] = {vetor1[4], vetor1[5], vetor1[6], vetor1[7]};
+    inteiro vetor4[4];
+    escreva("  Vetor2:         Vetor3:\n");
+    para (a=0; a<4; a++)
+        escreva ("[%d]", vetor2[a]);
+    fim
+    escreva ("     ");
+    para (a=0; a<4; a++)
+        escreva ("[%d]", vetor3[a]);
+    fim
+    escreva ("\n");
+    se (vetor2[0]<vetor3[0] && vetor2[3]<vetor3[0])
+        vetor4[0]=vetor2[0];
+        vetor4[1]=vetor2[1];
+        vetor4[2]=vetor2[2];
+        vetor4[3]=vetor2[3];
+        vetor4[4]=vetor3[0];
+        vetor4[5]=vetor3[1];
+        vetor4[6]=vetor3[2];
+        vetor4[7]=vetor3[3];
+    contrario
+        vetor4[0]=vetor3[0];
+        vetor4[1]=vetor3[1];
+        vetor4[2]=vetor3[2];
+        vetor4[3]=vetor3[3];
+        vetor4[4]=vetor2[0];
+        vetor4[5]=vetor2[1];
+        vetor4[6]=vetor2[2];
+        vetor4[7]=vetor2[3];
+    fim
+    escreva ("Vetor4:\n");
+    para (a=0; a<8; a++)
+        escreva ("[%d]",vetor4[a]);
+    fim
+    retorna 0; 
+fim 
